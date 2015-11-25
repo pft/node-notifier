@@ -16,15 +16,16 @@ or include it in `package.json`
 
 ```js
 var notifier = new Notifier({
-  service: 'postmark' // or 'sendgrid'
-  APN: true,
+  service: 'postmark', // or 'sendgrid'
   email: true,
   dryRun: true, // send no email. Defaults to true when *not* in 'production' environment
   tplType: 'ejs', // if you want to use ejs as templating system
   actions: ['comment', 'like'],
   tplPath: require('path').resolve(__dirname, './templates'),
-  key: 'SERVICE_KEY',
-  sendgridUser: 'SENDGRID_USER',
+  // Sendgrid and Postmark:
+  key: 'API_KEY',
+  // Apple Push Notification:
+  APN: true,
   parseAppId: 'APP_ID',
   parseApiKey: 'MASTER_KEY'
 });
