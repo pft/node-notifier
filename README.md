@@ -51,7 +51,7 @@ notifier.use({
 
 notifier.send('comment', options, function (err) {
   if (err) return console.log(err);
-  console.log('Successfully sent Notifiaction!');
+  console.log('Successfully sent Notification!');
 });
 ```
 
